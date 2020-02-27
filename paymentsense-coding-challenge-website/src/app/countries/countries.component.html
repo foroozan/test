@@ -1,0 +1,13 @@
+<div class="card text-center m-3" *ngIf="countries.length>0">
+    <h3 class="card-header">Countries</h3>
+    <div class="card-body">
+        <mat-accordion>
+            <div *ngFor="let country of pageOfCountries">
+                <app-country [country]="country"></app-country>
+            </div>
+        </mat-accordion>
+    </div>
+    <div class="card-footer pb-0 pt-10">
+        <jw-pagination [items]="countries" (changePage)="onChangePage($event)"></jw-pagination>
+    </div>
+</div>
