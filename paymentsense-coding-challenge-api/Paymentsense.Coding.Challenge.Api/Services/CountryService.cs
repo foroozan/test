@@ -1,5 +1,4 @@
 ﻿using LazyCache;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Paymentsense.Coding.Challenge.Api.Configs;
@@ -15,7 +14,6 @@ namespace Paymentsense.Coding.Challenge.Api.Services
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IOptions<AppSettings> _settings;
-        private readonly IConfiguration _config;
         private readonly IAppCache _appCache;
 
         public CountryService(IHttpClientFactory httpClientFactory, IOptions<AppSettings> settings, IAppCache appCache)

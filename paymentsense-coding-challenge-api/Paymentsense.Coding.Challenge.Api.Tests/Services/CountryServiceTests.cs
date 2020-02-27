@@ -21,14 +21,14 @@ namespace Paymentsense.Coding.Challenge.Api.Tests.Services
     {
         private CountryService _sut;
         private Mock<IHttpClientFactory> _httpClientFactoryMock;
-        private Mock<IOptions<AppSettings>> _config;
+        private Mock<IOptions<AppSettings>> _appSettingsMock;
 
         public CountryServiceTests()
         {
             _httpClientFactoryMock = new Mock<IHttpClientFactory>();
-            _config = new Mock<IOptions<AppSettings>>();
-            _config.Setup(x => x.Value).Returns(new AppSettings());
-            _sut = new CountryService(_httpClientFactoryMock.Object, _config.Object, new MockCachingService());
+            _appSettingsMock = new Mock<IOptions<AppSettings>>();
+            _appSettingsMock.Setup(x => x.Value).Returns(new AppSettings());
+            _sut = new CountryService(_httpClientFactoryMock.Object, _appSettingsMock.Object, new MockCachingService());
         }
 
         [Fact]
