@@ -1,19 +1,19 @@
 # CodingChallenge
 Paymentsense coding challenge
 
-Project consists of:
+This repository contains:
 
 1) Countries Api
 2) Angular UI 
 
-Technologies used in Api includes:
+Technologies that are used in Api includes:
 
 LazyCache,
 Swagger,
 Moq,
 FluentAssertion
 
-Technologies used in FrontEnd:
+Technologies that are used in UI includes:
 
 AngularMaterial,
 AppConfiguration
